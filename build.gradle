@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.code.gson:gson:2.8.0'
+    implementation files('libs/httpmime-4.5.3.jar')
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
